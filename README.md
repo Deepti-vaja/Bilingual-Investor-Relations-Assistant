@@ -1,26 +1,62 @@
-#  **🚀 Bilingual Investor Relations Assistant**
+# 🚀 Bilingual Investor Relations Assistant
 
+> Multilingual RAG-based financial document assistant for English and Japanese investor relations reports
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![FAISS](https://img.shields.io/badge/VectorDB-FAISS-green)
+![TinyLlama](https://img.shields.io/badge/LLM-TinyLlama-black)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-teal)
+![BGE-M3](https://img.shields.io/badge/Embedding-BGE--M3-green)
 ![RAG](https://img.shields.io/badge/Architecture-RAG-orange)
-![LLM](https://img.shields.io/badge/LLM-TinyLlama-red)
-![Embedding](https://img.shields.io/badge/Embedding-BAAIbge)
-![Language](https://img.shields.io/badge/Language-EN%20%2F%20JP-purple)
+![Language](https://img.shields.io/badge/Language-EN%20%7C%20JP-purple)
 
-## 🎯 Objective
 
-The Bilingual Investor Relations Assistant is an LLM-powered RAG based system designed to analyze and retrieve insights from English and Japanese financial documents using semantic search and context-aware interaction.
+## 📑 Table of Contents
 
-## 🎯 Purpose
+- [🎯 Overview](#-overview)
+- [🏗️ Architecture](#️-architecture)
+- [💡 Example Queries](#-example-queries)
+- [🖥️ CLI Output](#cli-output)
+  - [System Initialization](#system-initialization)
+  - [Retrieval & Response Generation](#retrieval--response-generation)
+- [⚙️ How It Works](#️-how-it-works)
+- [🛠️ Tech Stack](#️-tech-stack)
+  - [🐍 Core Language](#-core-language)
+  - [📄 Document Processing](#-document-processing)
+  - [🧠 Embeddings & Models](#-embeddings--models)
+  - [🌐 Language Handling](#-language-handling)
+  - [📊 Vector Database](#-vector-database)
+  - [💬 Application Interface](#-application-interface)
+  - [🔐 Environment & Utilities](#-environment--utilities)
+  - [📜 Additional Features](#-additional-features)
+- [🧠 Technical Design Decisions](#technical-design-decisions)
+- [✨ Features](#features)
+  - [Phase 1: Data Indexing](#phase-1-data-indexing)
+  - [Phase 2: Retrieval and Generation](#phase-2-retrieval-and-generation)
+- [🚀 Installation & Setup](#-installation--setup)
+  - [📥 Clone the Repository](#-1-clone-the-repository)
+  - [🐍 Create a Virtual Environment](#-2-create-a-virtual-environment)
+  - [⚙️ Activate the Virtual Environment](#️-3-activate-the-virtual-environment)
+  - [📦 Install Dependencies](#-4-install-dependencies)
+  - [🔐 Environment Variables Setup](#-5-environment-variables-setup)
+  - [▶️ Run the Application](#️-6-run-the-application)
+- [⚙️ Setup Flow](#️-setup-flow)
+- [👩‍💻 Author](#author)
 
-Exploring financial reports manually can be overwhelming — especially when important insights are scattered across lengthy English and Japanese documents.
+## 🎯 Overview
 
-The Bilingual Investor Relations Assistant turns this process into a more natural and interactive experience. Instead of relying on traditional keyword searching, users can simply ask questions in their preferred language and receive relevant, context-aware responses generated directly from the documents.
+The Bilingual Investor Relations Assistant is a multilingual RAG-based
+system designed to analyze English and Japanese financial documents
+through semantic retrieval and context-aware interaction.
 
-To make retrieval more transparent and trustworthy, the system also surfaces the most relevant document chunks along with similarity scores behind each response. Combined with conversational memory, this creates a smoother and more intuitive way to explore sensitive information.
+Instead of relying on traditional keyword search, users can ask
+questions naturally and receive grounded responses generated directly
+from investor relations reports.
 
-## Architecture 
+To improve transparency, the system also displays retrieved document
+chunks and similarity scores behind each response.
+
+
+## 🏗️ Architecture 
 
 ```text
 Bilingual Investor Relations Assistant
@@ -58,15 +94,7 @@ Bilingual Investor Relations Assistant
 
 ```
 
-## 📑 Table of Contents
 
-- [Objective](#-objective)
-- [Features](#-features)
-- [CLI Output](#️-cli-output)
-- [Architecture](#️-architecture)
-- [Tech Stack](#️-tech-stack)
-- [Installation & Setup](#-installation--setup)
-- [Author](#-author)
   
 ## 💡 Example Queries
 
@@ -76,6 +104,9 @@ What was the total revenue?
 What are the company growth trends?
 
 ```
+<a id="cli-output"></a>
+
+## 🖥️ CLI Output
 🖥️ CLI Output
 
 ## System Initialization
@@ -139,22 +170,60 @@ What are the company growth trends?
 ### 📜 Additional Features
 - Chat history storage  
 - Metadata filtering (document type-based retrieval)
-  
+
+<a id="technical-design-decisions"></a>
+## Technical Design Decisions
+<details>
+<summary><strong>Why TinyLlama?</strong></summary>
+
+- 🌍 Open-source and community-driven
+- ⚡ Inference speed ↑
+- 🧠 Memory consumption ↓
+- 💻 Hardware requirements ↓
+- 🔄 Development iteration ↑
+
+
+</details>
+
+<details>
+<summary><strong>Why BAAI-BGE-M3?</strong></summary>
+
+BAAI-BGE-M3 was chosen for its strong multilingual semantic retrieval
+performance across English and Japanese documents.
+
+Compared to many general embedding models, it provides better
+cross-lingual understanding, retrieval accuracy, and efficient
+integration with FAISS for RAG-based search.
+
+</details>
+
+<details>
+<summary><strong>Why FAISS?</strong></summary>
+
+FAISS was selected for its fast and memory-efficient vector similarity
+search capabilities.
+
+Compared to heavier  vector databases, FAISS provides
+efficient local semantic retrieval, making it well-suited for scalable
+RAG experimentation and multilingual document search.
+
+</details>
+<a id="features"></a>
+
 ## ✨ Features
 
-- 🌐 Multilingual query handling (EN / JP)   
-- 🔍 Intelligent document retrieval using FAISS vector search  
-- ✂️ Automatic document chunking for efficient processing  
-- 🏷️ Metadata-aware retrieval for better document filtering  
-- 💬 CLI-based conversational chatbot interface  
-- 📜 Chat history tracking for conversational context  
-- ⚡ Fast similarity search using multilingual embeddings  
-- 🤖  LLM-powered answer generation using TinyLlama  
-- 📊 Displays retrieved chunks with similarity scores for transparency  
-- 🔐 Environment-based configuration using “.env” support  
-- 🧩 Modular pipeline architecture for scalability and maintainability  
-- 📁 Cached chunk storage to avoid repeated preprocessing  
- 
+- 🌐 Multilingual EN / JP interaction
+- 🔍 Semantic retrieval with FAISS
+- 🧠 BGE-M3 embedding pipeline
+- 🤖 TinyLlama-powered responses
+- ✂️ Intelligent document chunking
+- 📊 Retrieval transparency & scoring
+- 💬 Conversational chatbot memory
+- 🏷️ Metadata-aware search
+- ⚡ Fast local vector retrieval
+- 📁 Cached document preprocessing
+- 🔐 `.env`-based configuration
+- 🧩 Modular RAG workflow
 
 ### Phase 1: Data Indexing
 
@@ -168,7 +237,7 @@ What are the company growth trends?
                                          ▼                                   ▼
                             
                             storage/chunked_doc/                storage/vector_db/
-                            │                                    │
+                            │                                   │
                             ├── chunked_docs_en.pkl             ├── faiss_index_en/
                             └── chunked_docs_jp.pkl             └── faiss_index_jp/
 ```
@@ -250,7 +319,7 @@ python main.py
 
 **Clone → Create venv → Activate venv → Install dependencies → Setup .env → Run project**
 
-
+<a id="author"></a>
 ## 👩‍💻 Author
 
 ### Deepti Vaja
@@ -262,4 +331,5 @@ python main.py
 🚀 Exploring AI, Machine Learning, GenAI, LLMs for business insights.
 
 - GitHub: [@Deepti-vaja](https://github.com/Deepti-vaja)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-linkedin-profile)
+- LinkedIn: [@Deepti-vaja linkedin](https://www.linkedin.com/in/deepti-nitesh-vaja-3485402a7/)
+
