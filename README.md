@@ -20,6 +20,7 @@
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🧠 Technical Design Decisions](#technical-design-decisions)
 - [✨ Features](#features)
+- [⚙️ End-to-End Processing Pipeline](#pipeline)
 - [🚀 Installation & Setup](#-installation--setup)
 - [⚙️ Setup Flow](#️-setup-flow)
 - [👩‍💻 Author](#author)
@@ -89,7 +90,6 @@ What are the company growth trends?
 <a id="cli-output"></a>
 
 ## 🖥️ CLI Output
-🖥️ CLI Output
 
 ## System Initialization
 
@@ -111,47 +111,13 @@ What are the company growth trends?
 
 ## 🛠️ Tech Stack
 
-### 🐍 Core Language
 - Python
-
----
-
-### 📄 Document Processing
-- **PyMuPDF** – PDF text extraction  
-- **RecursiveCharacterTextSplitter** – Text chunking and splitting large documents  
-
----
-
-### 🧠 Embeddings & Models
-- **sentence-transformers** – Multilingual embeddings  
-- **BAAI/bge-m3** – Embedding model used for semantic search  
-- **TinyLlama/TinyLlama-1.1B-Chat-v1.0** – Lightweight LLM for response generation  
-
----
-
-### 🌐 Language Handling
-- **langdetect** – Detects input language (English / Japanese)  
-
----
-
-### 📊 Vector Database
-- **FAISS** – Fast similarity search and retrieval of document chunks  
-
----
-
-### 💬 Application Interface
-- **CLI-based Chatbot** – Terminal-based interaction system  
-
----
-
-### 🔐 Environment & Utilities
-- **python-dotenv** – Environment variable management  
-
----
-
-### 📜 Additional Features
-- Chat history storage  
-- Metadata filtering (document type-based retrieval)
+- PyMuPDF
+- BAAI-bge-m3
+- TinyLlama
+- FAISS
+- langdetect
+- dotenv
 
 <a id="technical-design-decisions"></a>
 ## Technical Design Decisions
@@ -206,6 +172,10 @@ RAG experimentation and multilingual document search.
 - 📁 Cached document preprocessing
 - 🔐 `.env`-based configuration
 - 🧩 Modular RAG workflow
+
+<a id="pipeline"></a>
+
+## ⚙️ End-to-End Processing Pipeline
 
 ### Phase 1: Data Indexing
 
