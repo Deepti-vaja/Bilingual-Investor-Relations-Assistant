@@ -1,5 +1,13 @@
 #  **🚀 Bilingual Investor Relations Assistant**
 
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-green)
+![RAG](https://img.shields.io/badge/Architecture-RAG-orange)
+![LLM](https://img.shields.io/badge/LLM-TinyLlama-red)
+![Embedding](https://img.shields.io/badge/Embedding-BAAIbge)
+![Language](https://img.shields.io/badge/Language-EN%20%2F%20JP-purple)
+
 ## 🎯 Objective
 
 The Bilingual Investor Relations Assistant is an LLM-powered RAG based system designed to analyze and retrieve insights from English and Japanese financial documents using semantic search and context-aware interaction.
@@ -66,7 +74,28 @@ Bilingual Investor Relations Assistant
 What was the total revenue?
 最も一般的で直接的な聞き方です。？
 What are the company growth trends?
+
 ```
+🖥️ CLI Output
+
+## System Initialization
+
+![Initialization](https://github.com/user-attachments/assets/7d62ce1a-cf81-42d8-b7c5-b2ab009a1187)
+
+
+## Retrieval & Response Generation
+
+![Chatbot Demo](https://github.com/user-attachments/assets/2f4a65fb-5587-427b-9c6a-4bd981f59b53)
+
+## ⚙️ How It Works
+
+1. Load multilingual financial documents
+2. Split into chunks
+3. Generate embeddings
+4. Store in FAISS
+5. Retrieve relevant chunks
+6. Generate grounded response using TinyLlama
+
 ## 🛠️ Tech Stack
 
 ### 🐍 Core Language
@@ -146,6 +175,7 @@ What are the company growth trends?
 
 
 ### PHASE 2: RETRIEVAL AND GENERATION 
+
 ```text
                ┌────────────────────────────────────────────────────────┐
                │                     User Request                       │
@@ -188,3 +218,43 @@ What are the company growth trends?
 
 ```
 
+## 🚀 Installation & Setup 
+
+### 📥 1. Clone the Repository
+```bash
+git clone https://github.com/Deepti-vaja/Bilingual-Investor-Relations-Assistant.git
+cd Bilingual-Investor-Relations-Assistant
+```
+### 🐍 2. Create a Virtual Environment
+```bash
+python -m venv venv
+```
+### ⚙️ 3. Activate the Virtual Environment
+```bash
+venv\Scripts\activate
+```
+### 📦 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 🔐 5. Environment Variables Setup 
+```bash
+copy .env.example.env
+```
+### ▶️ 6. Run the Application
+```bash
+python main.py
+```
+## ⚙️ Setup Flow
+
+**Clone → Create venv → Activate venv → Install dependencies → Setup .env → Run project**
+
+## 👩‍💻 Author 
+
+## **Deepti Vaja** 
+**AI Developer | RAG Systems | NLP | Python** 
+📌 Passionate about building  AI intelligence systems.
+🚀 Exploring AI, Machine Learning, GenAI,LLMs for business insights. 
+
+- GitHub: [@Deepti-vaja](https://github.com/Deepti-vaja)
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-linkedin-profile)
