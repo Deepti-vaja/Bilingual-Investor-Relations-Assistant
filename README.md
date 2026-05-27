@@ -245,16 +245,21 @@ copy .env.example.env
 ```bash
 python main.py
 ```
+
 ## ⚙️ Setup Flow
 
 **Clone → Create venv → Activate venv → Install dependencies → Setup .env → Run project**
 
-## 👩‍💻 Author 
 
-## **Deepti Vaja** 
-**AI Developer | RAG Systems | NLP | Python** 
-📌 Passionate about building  AI intelligence systems.
-🚀 Exploring AI, Machine Learning, GenAI,LLMs for business insights. 
+## 👩‍💻 Author
+
+### Deepti Vaja
+
+**AI Developer | RAG Systems | NLP | Python**  
+
+📌 Passionate about building AI intelligence systems.  
+
+🚀 Exploring AI, Machine Learning, GenAI, LLMs for business insights.
 
 - GitHub: [@Deepti-vaja](https://github.com/Deepti-vaja)
 - LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-linkedin-profile)
